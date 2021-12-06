@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
+                <div class="card-header text-center">{{ __('Restaurant Management System Dashboard') }}</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -14,7 +14,38 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+                    <div class="row">
+                        <div class="col-sm-4">                            
+                            <div class="text-center">
+                                <div>
+                                    <a href="#"><img src="{{ asset('image/management.png') }}" alt="" width="120"></a>
+                                </div>
+                                <div class="mt-3">
+                                    <h5>Management</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">                            
+                            <div class="text-center">
+                                <div>
+                                    <a href="#"><img src="{{ asset('image/payment.png') }}" alt="" width="120"></a>
+                                </div>
+                                <div class="mt-3">
+                                    <h5>Payment</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="text-center">
+                                <div>
+                                    <a href="#"><img src="{{ asset('image/report.png') }}" alt="" width="120"></a>
+                                </div>
+                                <div class="mt-3">
+                                    <h5>Report</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
