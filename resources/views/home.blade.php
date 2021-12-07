@@ -18,7 +18,7 @@
                         <div class="col-sm-4">                            
                             <div class="text-center">
                                 <div>
-                                    <a href="#"><img src="{{ asset('image/management.png') }}" alt="" width="120"></a>
+                                    <a href="{{ route('management.index') }}"><img src="{{ asset('image/management.png') }}" alt="" width="120"></a>
                                 </div>
                                 <div class="mt-3">
                                     <h5>Management</h5>
