@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Management\CategoryController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,3 +23,5 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::view('/management', 'management.index')->name('management.index');
+
+Route::resource('/management/category', CategoryController::class);
