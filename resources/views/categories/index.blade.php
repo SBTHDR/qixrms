@@ -41,7 +41,7 @@
                             <td>{{ $category->name }}</td>
                             <td>{{ $category->created_at }}</td>
                             <td>
-                                <a href="" class="btn btn-sm btn-primary">Edit</a>
+                                <a href="{{ route('category.edit', $category->id) }}" class="btn btn-sm btn-primary">Edit</a>
                                 <a href="" class="btn btn-sm btn-danger">Delete</a>
                             </td>
                         </tr>
