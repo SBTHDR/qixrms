@@ -57,6 +57,7 @@
                             @enderror                      
                         </div>                     
                         <div>
+                            <a href="{{ route('menu.index') }}" class="btn btn-secondary">Cancle</a>
                             <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Update Menu</button>
                         </div>
                     </form>
