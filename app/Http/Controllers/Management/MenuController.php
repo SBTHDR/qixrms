@@ -136,6 +136,10 @@ class MenuController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $menu = Menu::findOrFail($id);
+        unlink(public_path('images/menu') . '/' .$menu->image);
+        $menu->delete();
+
+        return redirect()->back()->with('success', 'Menu deleted successfully');
     }
 }
