@@ -9,5 +9,10 @@ class Menu extends Model
 {
     use HasFactory;
 
-    protected $guarded = [];
+    protected $guarded = []; 
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
 }

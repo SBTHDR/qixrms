@@ -16,7 +16,8 @@ class MenuController extends Controller
      */
     public function index()
     {
-        return view('menu.index');
+        $menus = Menu::paginate(5);
+        return view('menu.index', compact('menus'));
     }
 
     /**

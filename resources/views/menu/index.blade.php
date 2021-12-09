@@ -17,25 +17,33 @@
                     <a href="{{ route('menu.create') }}" class="btn btn-primary"><i class="fas fa-plus"></i> Create</a>
                 </div>
             </div>
-            {{-- <div class="card mt-3 p-3">
+            <div class="card mt-3 p-3">
                 <table class="table table-bordered border-dark">
                     <thead>
                       <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Name</th>
-                        <th scope="col">Date</th>
-                        <th scope="col">Action</th>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Image</th>
+                        <th>Menu Category</th>
+                        <th>Description</th>
+                        <th>Price</th>                
+                        <th>Action</th>
                       </tr>
                     </thead>
                     <tbody>
-                      @foreach ($categories as $category)
+                      @foreach ($menus as $menu)
                         <tr>
-                            <th>{{ $category->id }}</th>
-                            <td>{{ $category->name }}</td>
-                            <td>{{ $category->created_at }}</td>
+                            <td>{{ $menu->id }}</td>
+                            <td>{{ $menu->name }}</td>
+                            <td>
+                                <img src="{{ asset('images/menu/' . $menu->image) }}" class="img-thumbnail" alt="" width="120px">
+                            </td>
+                            <td>{{ $menu->category->name }}</td>
+                            <td>{{ $menu->description }}</td>
+                            <td>{{ $menu->price }}</td>
                             <td class="d-flex gap-2">
-                                <a href="{{ route('category.edit', $category->id) }}" class="btn btn-sm btn-primary">Edit</a>
-                                <form action="{{ route('category.destroy', $category->id) }}" method="POST">
+                                <a href="{{ route('menu.edit', $menu->id) }}" class="btn btn-sm btn-primary">Edit</a>
+                                <form action="{{ route('menu.destroy', $menu->id) }}" method="POST">
                                     @csrf
                                     @method('DELETE')                                
                                     <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">Delete</button>
@@ -64,8 +72,8 @@
                       @endforeach                  
                     </tbody>
                   </table>
-                  {{ $categories->links() }}
-            </div> --}}
+                  {{ $menus->links() }}
+            </div>
         </div>
     </div>
 </div>
