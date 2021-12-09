@@ -83,7 +83,10 @@ class MenuController extends Controller
      */
     public function edit($id)
     {
-        //
+        $menu = Menu::findOrFail($id);
+        $categories = Category::all();
+
+        return view('menu.edit', compact('menu', 'categories'));
     }
 
     /**
@@ -95,7 +98,34 @@ class MenuController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'name' =>  ['required', 'max:255'],
+            'description' =>  ['required', 'max:255'],
+            'price' =>  ['required', 'numeric'],
+            'category_id' =>  ['required', 'numeric'],
+        ]);
+
+        $menu = Menu::findOrFail($id);
+
+        if ($request->image) {
+            $oldImageName = $menu->image;
+            unlink(public_path('images/menu') . '/' . $oldImageName);
+
+            $imageName = date('mdYHis').uniqid().'.'.$request->image->extension();
+            $request->image->move(public_path('images/menu'), $imageName);
+        } else {
+            $imageName = $menu->image;
+        }
+
+        $menu->name = $request->name;
+        $menu->description = $request->description;
+        $menu->price = $request->price;
+        $menu->category_id = $request->category_id;
+        $menu->image = $imageName;
+
+        $menu->save();
+
+        return redirect()->route('menu.index')->with('success', 'Menu updated successfully');
     }
 
     /**
