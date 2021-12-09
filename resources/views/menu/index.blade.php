@@ -13,11 +13,11 @@
             @endif    
             <div class="card">
                 <div class="card-body d-flex align-items-center justify-content-between">
-                    <h5 style="margin: 0">Create Category</h5>
-                    <a href="{{ route('category.create') }}" class="btn btn-primary"><i class="fas fa-plus"></i> Create</a>
+                    <h5 style="margin: 0">Create Menu</h5>
+                    <a href="{{ route('menu.create') }}" class="btn btn-primary"><i class="fas fa-plus"></i> Create</a>
                 </div>
             </div>
-            <div class="card mt-3 p-3">
+            {{-- <div class="card mt-3 p-3">
                 <table class="table table-bordered border-dark">
                     <thead>
                       <tr>
@@ -65,7 +65,7 @@
                     </tbody>
                   </table>
                   {{ $categories->links() }}
-            </div>
+            </div> --}}
         </div>
     </div>
 </div>

@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\Management\CategoryController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Management\MenuController;
+use App\Http\Controllers\Management\CategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,3 +26,4 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::view('/management', 'management.index')->name('management.index');
 
 Route::resource('/management/category', CategoryController::class);
+Route::resource('/management/menu', MenuController::class);
