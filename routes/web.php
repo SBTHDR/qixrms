@@ -24,8 +24,11 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+// Management View
 Route::view('/management', 'management.index')->name('management.index');
-
+// Management View
 Route::resource('/management/category', CategoryController::class);
 Route::resource('/management/menu', MenuController::class);
 Route::resource('/management/table', TableController::class);
+
+

@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        @include('partials.sidebar')
+        @include('management.partials.sidebar')
         <div class="col-md-8 flex">            
             <div class="card">
                 <div class="card-body">

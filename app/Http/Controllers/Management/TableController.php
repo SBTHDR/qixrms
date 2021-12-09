@@ -16,7 +16,7 @@ class TableController extends Controller
     public function index()
     {
         $tables = Table::paginate(5);
-        return view('table.index', compact('tables'));
+        return view('management.table.index', compact('tables'));
     }
 
     /**
@@ -26,7 +26,7 @@ class TableController extends Controller
      */
     public function create()
     {
-        return view('table.create');
+        return view('management.table.create');
     }
 
     /**
@@ -68,7 +68,7 @@ class TableController extends Controller
     public function edit($id)
     {
         $table = Table::findOrFail($id);
-        return view('table.edit', compact('table'));
+        return view('management.table.edit', compact('table'));
     }
 
     /**

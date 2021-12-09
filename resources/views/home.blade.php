@@ -18,7 +18,7 @@
                         <div class="col-sm-4">                            
                             <div class="text-center">
                                 <div>
-                                    <a href="{{ route('management.index') }}"><img src="{{ asset('image/management.png') }}" alt="" width="120"></a>
+                                    <a href="{{ route('management.index') }}"><img src="{{ asset('img/management.png') }}" alt="" width="120"></a>
                                 </div>
                                 <div class="mt-3">
                                     <h5>Management</h5>
@@ -28,7 +28,7 @@
                         <div class="col-sm-4">                            
                             <div class="text-center">
                                 <div>
-                                    <a href="#"><img src="{{ asset('image/payment.png') }}" alt="" width="120"></a>
+                                    <a href="#"><img src="{{ asset('img/payment.png') }}" alt="" width="120"></a>
                                 </div>
                                 <div class="mt-3">
                                     <h5>Payment</h5>
@@ -38,7 +38,7 @@
                         <div class="col-sm-4">
                             <div class="text-center">
                                 <div>
-                                    <a href="#"><img src="{{ asset('image/report.png') }}" alt="" width="120"></a>
+                                    <a href="#"><img src="{{ asset('img/report.png') }}" alt="" width="120"></a>
                                 </div>
                                 <div class="mt-3">
                                     <h5>Report</h5>

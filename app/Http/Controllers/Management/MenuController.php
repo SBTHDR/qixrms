@@ -17,7 +17,7 @@ class MenuController extends Controller
     public function index()
     {
         $menus = Menu::paginate(5);
-        return view('menu.index', compact('menus'));
+        return view('management.menu.index', compact('menus'));
     }
 
     /**
@@ -28,7 +28,7 @@ class MenuController extends Controller
     public function create()
     {
         $categories = Category::all();
-        return view('menu.create', compact('categories'));
+        return view('management.menu.create', compact('categories'));
     }
 
     /**
@@ -86,7 +86,7 @@ class MenuController extends Controller
         $menu = Menu::findOrFail($id);
         $categories = Category::all();
 
-        return view('menu.edit', compact('menu', 'categories'));
+        return view('management.menu.edit', compact('menu', 'categories'));
     }
 
     /**
