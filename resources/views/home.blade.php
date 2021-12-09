@@ -28,7 +28,7 @@
                         <div class="col-sm-4">                            
                             <div class="text-center">
                                 <div>
-                                    <a href="{{ route('payment.index') }}"><img src="{{ asset('img/payment.png') }}" alt="" width="120"></a>
+                                    <a href="#"><img src="{{ asset('img/payment.png') }}" alt="" width="120"></a>
                                 </div>
                                 <div class="mt-3">
                                     <h5>Payment</h5>
