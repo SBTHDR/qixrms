@@ -41,14 +41,14 @@
                                     <option value="{{ $category->id }}">{{ $category->name }}</option>
                                 @endforeach
                             </select>                            
-                            @error('menu_category')
+                            @error('category_id')
                                 <p class="text-danger">{{ $message }}</p>
                             @enderror                      
                         </div>
                         <div class="form-group mb-3">
                             <label for="image" class="mb-2"><strong>Menu Image</strong></label>
                             <div class="input-group">
-                                <input type="file" class="form-control" id="image">
+                                <input type="file" class="form-control" id="image" name="image">
                                 <label class="input-group-text" for="image">Upload</label>
                             </div>
                             @error('image')
