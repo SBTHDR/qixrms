@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Management\MenuController;
 use App\Http\Controllers\Management\TableController;
 use App\Http\Controllers\Management\CategoryController;
+use App\Http\Controllers\Payment\PaymentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,9 +27,13 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 // Management View
 Route::view('/management', 'management.index')->name('management.index');
-// Management View
+// Management Route
 Route::resource('/management/category', CategoryController::class);
 Route::resource('/management/menu', MenuController::class);
 Route::resource('/management/table', TableController::class);
 
 
+// Tables Route
+Route::get('/payment/tables', [PaymentController::class, 'getTables']);
+// Payment Route
+Route::get('/payment', [PaymentController::class, 'index'])->name('payment.index');
